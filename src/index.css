@@ -1,13 +1,118 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+*{
+  padding:0;
+  margin:0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body{
+  font-family: 'Spartan', sans-serif;
+}
+
+.flex-between{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+/* ***************HEADER STYLES**************** */
+.links h1{
+  font-size: 16px;
+  line-height: 25px;
+  font-weight: 700;
+  cursor: pointer;
+  color: #7f8490;
+  transition: 0.3s all ease-in
+}
+
+.links h1:hover{
+  color:black;
+  transition: 0.3s all ease-in
+}
+
+.vertical-group{
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  color: #7f8490;
+  font-size: 20px;
+  font-weight: 500
+  
+}
+
+.hang-down{
+  text-align: center;
+  width: 1px;
+  height: 105px;
+  background-color: #c9cdd9;
+  color: black;
+  margin: 0 0 25px 18px
+}
+
+
+/* ********* FOOTER ************** */
+footer{
+  height: 200px;
+  margin: 0 auto;
+  background: #F0F0F5;
+}
+
+.foot-logo{
+  height: 200px;
+  background: #000;
+}
+
+
+/* ********** BUTTON********* */
+.global-btn {
+  /* width: 100%; */
+  background: #1B1D23;
+  color: #fff;
+  border: none;
+  padding: 24px 20px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 700;
+  transition: all 0.7s ease;
+}
+
+.global-btn:hover{
+  background: #686a70;
+  transition: all 0.7s ease;
+}
+
+
+/* *********88 HOME ************ */
+.sub-header{
+  color: #60636c;
+  font-size: 56px;
+  font-weight: 800;
+  line-height: 60px;
+}
+
+.welcome-area p{
+  font-size: 16px;
+  color: #1b1d23;
+  font-weight: 500;
+  opacity: 0.8;
+}
+
+.big-text{
+  font-size: 200px;
+  font-weight: 650;
+  letter-spacing: 12px;
+  color:#F0F0F5;
+}
+
+.big-team{
+  font-size: 56px;
+  font-weight: bold;
+  line-height: 56px;
+  letter-spacing: -2px;
+  color:#fff;
+}
+
+.featured{
+  color:#000;
+  font-size: 56px;
+  font-weight: bold;
 }

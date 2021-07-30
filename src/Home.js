@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import Button from "./components/Button";
 import Data from "./components/data";
 import Footer from "./components/Footer";
@@ -84,7 +85,7 @@ const Home = ({ }) => {
                     <div className="absolute top-0 left-0 w-full ">
                         <div className="w-8/12 mx-auto pt-44">
                             <h1 className="big-team mb-10">Small team, <br></br> big ideas</h1>
-                            <Button text="About Us" className="w-6/12"/>
+                            <Link to="/about"><Button text="About Us" className="w-6/12"/></Link>
                         </div>
                     </div>
                 </div>
@@ -93,7 +94,7 @@ const Home = ({ }) => {
             <section className="w-9/12 mx-auto mb-40">
                 <div className="flex-between">
                     <h1 className="featured">Featured</h1>
-                    <Button text="See All"/>
+                    <Link to="/portfolio"><Button text="See All"/></Link>
                 </div>
 
                 <div>

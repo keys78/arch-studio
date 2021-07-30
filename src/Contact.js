@@ -80,7 +80,7 @@ const Contact = () => {
             <section className=" w-9/12 mx-auto">
                 <div className="flex justify-between pt-28 items-center relative md:flex-row flex-col">
                     <div className="w-4/12">
-                        <h1 className="sub-header mb-16 text-black">Connect With Us</h1>
+                        <h1 className="sub-header mb-16 text-black">Connect <br></br> With Us</h1>
                     </div>
             
                     <form onSubmit={validateForm} className="w-7/12 cd">

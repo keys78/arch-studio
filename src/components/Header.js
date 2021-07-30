@@ -5,7 +5,7 @@ const Header = ({ title }) => {
         <header className="relative"> 
         <div className="w-9/12 mx-auto py-16">
             <div className="flex items-center justify-between w-6/12">
-                <Link to="/" className="w-6/12">
+                <Link to="/" className="w-4/12">
                     <img src={process.env.PUBLIC_URL + '/assets/logo.svg'} alt="arch-studio logo"/>
                 </Link>
                 <div className="links flex-between w-8/12">

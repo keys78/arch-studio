@@ -6,10 +6,39 @@ import Header from "./components/Header";
 
 const Home = ({ }) => {
     const [portfolios, setportfolios] = useState([
-        {id: 1, category: 'featured', name: 'Project Del Sol', img:'assets/portfolio/desktop/image-del-sol.jpg', },
-        {id: 2, category: 'featured', name: '228B Tower',  img:'assets/portfolio/desktop/image-228b.jpg', },
-        {id: 3, category: 'featured', name: 'Le Prototype', img:'assets/portfolio/desktop/image-prototype.jpg' }
-
+        {
+            id: 5,
+            category: 'featured', 
+            name: 'Project Del Sol', 
+            img:'assets/portfolio/desktop/image-del-sol.jpg',
+            imgT:'assets/portfolio/tablet/image-del-sol.jpg',
+            imgM:'assets/portfolio/mobile/image-del-sol.jpg',
+            numb:1,
+            no_date:true,
+            date:"January 2016"
+        },
+        {
+            id: 6,
+            category: 'featured',
+            name: '228B Tower',
+            img:'assets/portfolio/desktop/image-228b.jpg',
+            imgT:'assets/portfolio/tablet/image-228b.jpg',
+            imgM:'assets/portfolio/mobile/image-228b.jpg',
+            mumb:2,
+            no_date:true,
+            date:"September 2019"
+        },
+        {
+            id: 4,
+            category: 'featured', 
+            name: 'Le Prototype', 
+            img:'assets/portfolio/desktop/image-prototype.jpg',
+            img:'assets/portfolio/desktop/image-prototype.jpg',
+            img:'assets/portfolio/desktop/image-prototype.jpg',
+            numb:3,
+            no_date:true,
+            date:"October 2015"
+        },
     ]);
 
 
@@ -61,25 +90,14 @@ const Home = ({ }) => {
                 </div>
             </section>
 
-            <section className="w-9/12 mx-auto">
+            <section className="w-9/12 mx-auto mb-40">
                 <div className="flex-between">
                     <h1 className="featured">Featured</h1>
                     <Button text="See All"/>
                 </div>
 
                 <div>
-                    {/* <div className="featured-display">
-                        {(portfolios.filter((portfolio) => portfolio.category === "featured")).map((portfolio) => (
-                            <div key={ portfolio.id }>
-                                <p>id:{portfolio.id}</p>
-                                <h1>{ portfolio.name }</h1>
-                                <img src={process.env.PUBLIC_URL + portfolio.img} alt="photos"/>
-
-                            </div>
-                        ))}
-                    </div> */}
-                    <Data portfolios={portfolios.filter((portfolio) => portfolio.category === "featured")}/>
-                    
+                    <Data portfolios={portfolios.filter((portfolio) => portfolio.category === "featured")} view="View All Projects"/>
                 </div>
             </section>
             

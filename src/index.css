@@ -35,7 +35,10 @@ body{
   text-orientation: mixed;
   color: #7f8490;
   font-size: 20px;
-  font-weight: 500
+  font-weight: 500;
+  letter-spacing: 10px;
+  opacity: 0.7;
+
   
 }
 
@@ -83,7 +86,8 @@ footer{
 
 /* *********88 HOME ************ */
 .sub-header{
-  color: #60636c;
+  color: #3e3f44;
+  /* color: #60636c; */
   font-size: 56px;
   font-weight: 800;
   line-height: 60px;
@@ -115,4 +119,47 @@ footer{
   color:#000;
   font-size: 56px;
   font-weight: bold;
+}
+
+.number-count{
+  font-size: 200px;
+  font-weight: 650;
+  color:#F0F0F5;
+  opacity: 0.5;
+}
+
+.color{
+  color:#F0F0F5;
+}
+
+.links a.router-link-exact-active {
+  color:red;
+}
+
+.no-date{
+  display: none;
+}
+
+.date{
+  color:#F0F0F5;
+  font-weight: 400;
+  padding-top: 6px;
+}
+
+.blind{
+  display: none;
+}
+
+.person-hover:hover .blind{
+  display: block;
+  cursor: pointer;
+}
+
+
+/* contact */
+.cd{
+  color:#49494e;
+  font-weight: 500;
+  line-height: 2.5rem;
+  font-size: 18px;
 }

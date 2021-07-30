@@ -16,7 +16,7 @@ const Footer = () => {
             </div>
             <div className="absolute top-16 -right-10">
                 <div className="w-full">
-                <Button text={"See Our Portfolio"}/>
+                <Link to="/portfolio"><Button text={"See Our Portfolio"}/></Link>
                 </div>
             </div>
         </footer>

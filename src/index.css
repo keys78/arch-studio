@@ -169,4 +169,29 @@ footer{
   height: 100vh;
 }
 
-#mapid { height: 180px; }
+#mapid { 
+  height: 100vh;
+  width: 100%;
+}
+
+
+.input-group{
+  border-radius: 2px;
+  border-bottom:2px solid black;
+  width: 100%;
+  padding-left: 10px;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.el-label{
+  margin-top: 10px;
+  color:#49494e;
+  font-weight: 500;
+  font-size: 1.5rem;
+}
+
+/* .input-holder{
+  border: 2px solid hsl(172, 67%, 45%);
+  border-radius: 5px;
+} */

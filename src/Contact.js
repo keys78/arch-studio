@@ -1,9 +1,24 @@
 // import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
 import Footer from "./components/Footer"
 import Header from "./components/Header"
-import LeafletMap from "./components/LeafletMap"
+// import LeafletMap from "./components/LeafletMap"
+import { useState } from "react"
+import Button from "./components/Button"
 
 const Contact = () => {
+    const [name, setName] = useState('')
+    const [email, setEmail] = useState('')
+    const [message, setMessage] = useState('')
+
+    const validateForm = (e) => {
+        e.preventDefault();
+        if(name.length < 2 && email.length < 2 && message.length < 2 ) {
+            alert('Fill All Fields')
+        } else {
+            alert("Submitted")
+        }
+        console.log("HELLO")
+    }
     
     return ( 
         <div>
@@ -59,19 +74,37 @@ const Contact = () => {
                 </div>
             </section>
 
-            <section className=" w-9/12 mx-auto mt-20 mb-40">
-            {/* <MapContainer center={[51.505, -0.09]} zoom={13} scrollWheelZoom={false}>
-            <TileLayer
-                attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-                url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-            />
-            <Marker position={[51.505, -0.09]}>
-                <Popup>
-                A pretty CSS3 popup. <br /> Easily customizable.
-                </Popup>
-            </Marker>
-            </MapContainer> */}
-            <LeafletMap />
+            <div id="map" className="h-96 w-full bg-black my-12 text-white">MAP</div>
+            {/* <LeafletMap /> */}
+
+            <section className=" w-9/12 mx-auto">
+                <div className="flex justify-between pt-28 items-center relative md:flex-row flex-col">
+                    <div className="w-4/12">
+                        <h1 className="sub-header mb-16 text-black">Connect With Us</h1>
+                    </div>
+            
+                    <form onSubmit={validateForm} className="w-7/12 cd">
+                        <label className="el-label">Name</label>
+                        <input type="text"
+                            value={ name } onChange={(e) => setName(e.currentTarget.value)}
+                            className="input-group focus:outline-none"
+                        />
+                        <label className="el-label">Email</label>
+                        <input type="text"
+                            value={ email } onChange={(e) => setEmail(e.currentTarget.value)}
+                            className="input-group focus:outline-none"
+                        />
+                        <label className="el-label">Your Message</label>
+                        <input type="text"
+                            value={ message } onChange={(e) => setMessage(e.currentTarget.value)}
+                            className="input-group focus:outline-none"
+                        />
+
+                        <div className="flex justify-end mt-5">
+                            <Button type="submit" className="" text=""/>
+                        </div>
+                    </form>
+                </div>
             </section>
 
             <div>

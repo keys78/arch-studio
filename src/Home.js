@@ -5,7 +5,7 @@ import Footer from "./components/Footer";
 import Header from "./components/Header";
 
 const Home = ({ }) => {
-    const [portfolios, setportfolios] = useState([
+    const [portfolios] = useState([
         {
             id: 5,
             category: 'featured', 

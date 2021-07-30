@@ -3,8 +3,8 @@ import Header from "./components/Header"
 import Data from "./components/data";
 import Footer from "./components/Footer";
 
-const Portfolio = ({ }) => {
-    const [portfolios, setportfolios] = useState([
+const Portfolio = () => {
+    const [portfolios] = useState([
         {
             id: 1,
             category: 'none', 

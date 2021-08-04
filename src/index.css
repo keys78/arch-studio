@@ -191,11 +191,7 @@ footer{
   font-size: 1.5rem;
 }
 
-/* .input-holder{
-  border: 2px solid hsl(172, 67%, 45%);
-  border-radius: 5px;
-} */
-
+/* SLIDER */
 
 .slider-header{
   font-size: 80px;
@@ -210,9 +206,6 @@ footer{
   font-weight: 500;
 }
 
-
- 
-
  .swiper-slide img {
   display: block;
   width: 100%;
@@ -220,18 +213,31 @@ footer{
   object-fit: cover;
 } 
 
- .swiper-slide-pagination-bullet {
-  width: 80px;
-  height: 80px;
-  text-align: center;
-  line-height: 20px;
-  font-size: 12px;
-  color: #000;
-  opacity: 1;
-  background: rgba(0, 0, 0, 0.2);
+.swiper-pagination {
+  position: absolute !important;
+	bottom: 0px !important;
+	width: auto !important;
+	margin: 0 !important;
+}
+
+.swiper-pagination-bullet {
+  width: 80px !important;
+  height: 80px !important;
+  margin: 0 !important;
+  border: none !important;
+  border-radius: 0px !important;
+  padding-top: 30px !important;
+  text-align: center !important;
+  font-size: 20px !important;
+  font-weight: 800 !important;
+  color: rgb(0, 0, 0) !important;
+  opacity: 1 !important;
+  background: rgb(255, 255, 255) !important;
+  transition: background 0.7s ease-in all !important;
 }
 
 .swiper-pagination-bullet-active {
-  color: #fff;
-  background: #ff0000;
-} 
+  color: #fff !important;
+  background: #080808 !important;
+  transition: background 0.7s ease-in all !important;
+}

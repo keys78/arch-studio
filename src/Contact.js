@@ -9,13 +9,14 @@ const Contact = () => {
     const [name, setName] = useState('')
     const [email, setEmail] = useState('')
     const [message, setMessage] = useState('')
+    const [errorMessage, setErrorMessage] = useState('')
 
     const validateForm = (e) => {
         e.preventDefault();
-        if(name.length < 2 && email.length < 2 && message.length < 2 ) {
-            alert('Fill All Fields')
+        if( name.length < 2 && email.length < 2 && message.length < 2 ) {
+            setErrorMessage('Fill All Fields')
         } else {
-            alert("Submitted")
+            setErrorMessage('Submitted S')
         }
         console.log("HELLO")
     }
@@ -82,9 +83,13 @@ const Contact = () => {
                     <div className="w-4/12">
                         <h1 className="sub-header mb-16 text-black">Connect <br></br> With Us</h1>
                     </div>
-            
+
+                    
                     <form onSubmit={validateForm} className="w-7/12 cd">
-                        <label className="el-label">Name</label>
+                        <div>
+                            <label className="el-label">Name</label>
+                            <p>{ errorMessage }</p>
+                        </div>
                         <input type="text"
                             value={ name } onChange={(e) => setName(e.currentTarget.value)}
                             className="input-group focus:outline-none"

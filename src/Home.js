@@ -49,11 +49,10 @@ const Home = ({ }) => {
     return ( 
         <div>
             <Header title="HOME"/>
-            {/* <div className="w-9/12 mx-auto h-screen bg-black"></div> */}
-            <div className="w-9/12 mx-auto"><Swipe /></div>
+            <div className="w-9/12 mx-auto z-auto"><Swipe /></div>
             
 
-            <section className="w-9/12 mx-auto mt-44 ">
+            <section className="w-9/12 mx-auto mt-44">
                 <div className="flex items-end relative pt-24">
                     <div className="absolute text-9xl left-0 top-0 ">
                         <div className="w-full mx-auto">
@@ -61,7 +60,7 @@ const Home = ({ }) => {
                         </div>
                     </div>
                     <div className="w-5/12 ml-60 welcome-area">
-                        <h1 className="sub-header mb-16">Welcome to Arch Studio</h1>
+                        <h1 className="sub-header mb-8 mt-20">Welcome to Arch Studio</h1>
 
                         <p> We have a unique network and skillset to help bring your projects to life.
                             Our small team of highly skilled individuals combined with our large network put us in a strong position

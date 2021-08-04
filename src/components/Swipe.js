@@ -72,7 +72,7 @@ const Swipe = () => {
         
         {(slides.map((slide) => (
           <SwiperSlide key={slide.id}>
-          <div className="h-screen relative w-full bg-red-500">
+          <div className="h-screen relative w-full bg-black">
               <img src={ slide.img } />
               <div className="bg-black w-full h-full opacity-30 absolute top-0"></div>
               <div className="absolute w-full h-full top-0 left-0">

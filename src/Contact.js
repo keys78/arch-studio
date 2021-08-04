@@ -14,9 +14,13 @@ const Contact = () => {
     const validateForm = (e) => {
         e.preventDefault();
         if( name.length < 2 && email.length < 2 && message.length < 2 ) {
-            setErrorMessage('Fill All Fields')
+            setErrorMessage('This field can\'t be empty')
+            setInterval(() => {
+                setErrorMessage('')
+              }, 5000)
+            
         } else {
-            setErrorMessage('Submitted S')
+            alert('Submitted')
         }
         console.log("HELLO")
     }
@@ -86,20 +90,26 @@ const Contact = () => {
 
                     
                     <form onSubmit={validateForm} className="w-7/12 cd">
-                        <div>
+                        <div className="flex-between">
                             <label className="el-label">Name</label>
-                            <p>{ errorMessage }</p>
+                            <p className="text-xs text-red-500 font-bold">{ errorMessage }</p>
                         </div>
                         <input type="text"
                             value={ name } onChange={(e) => setName(e.currentTarget.value)}
                             className="input-group focus:outline-none"
                         />
-                        <label className="el-label">Email</label>
+                        <div className="flex-between">
+                            <label className="el-label">Email</label>
+                            <p className="text-xs text-red-500 font-bold">{ errorMessage }</p>
+                        </div>
                         <input type="text"
                             value={ email } onChange={(e) => setEmail(e.currentTarget.value)}
                             className="input-group focus:outline-none"
                         />
-                        <label className="el-label">Your Message</label>
+                        <div className="flex-between">
+                            <label className="el-label">Your Message</label>
+                            <p className="text-xs text-red-500 font-bold">{ errorMessage }</p>
+                        </div>
                         <input type="text"
                             value={ message } onChange={(e) => setMessage(e.currentTarget.value)}
                             className="input-group focus:outline-none"

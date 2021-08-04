@@ -4,6 +4,7 @@ import Button from "./components/Button";
 import Data from "./components/data";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
+import Swipe from "./components/Swipe";
 
 const Home = ({ }) => {
     const [portfolios] = useState([
@@ -48,7 +49,9 @@ const Home = ({ }) => {
     return ( 
         <div>
             <Header title="HOME"/>
-            <div className="w-9/12 mx-auto h-screen bg-black"></div>
+            {/* <div className="w-9/12 mx-auto h-screen bg-black"></div> */}
+            <div className="w-9/12 mx-auto"><Swipe /></div>
+            
 
             <section className="w-9/12 mx-auto mt-44 ">
                 <div className="flex items-end relative pt-24">

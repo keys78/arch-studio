@@ -164,17 +164,6 @@ footer{
   font-size: 18px;
 }
 
-.leaflet-container{
-  width: 100%;
-  height: 100vh;
-}
-
-#mapid { 
-  height: 100vh;
-  width: 100%;
-}
-
-
 .input-group{
   border-radius: 2px;
   border-bottom:2px solid black;
@@ -240,4 +229,11 @@ footer{
   color: #fff !important;
   background: #080808 !important;
   transition: background 0.7s ease-in all !important;
+}
+
+
+/* LEAFLET */
+.leaflet-container{
+  width: 100vw;
+  height: 100vh;
 }

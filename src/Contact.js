@@ -1,7 +1,7 @@
 // import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
 import Footer from "./components/Footer"
 import Header from "./components/Header"
-// import LeafletMap from "./components/LeafletMap"
+import LeafletMap from "./components/LeafletMap"
 import { useState } from "react"
 import Button from "./components/Button"
 
@@ -79,8 +79,10 @@ const Contact = () => {
                 </div>
             </section>
 
-            <div id="map" className="h-96 w-full bg-black my-12 text-white">MAP</div>
-            {/* <LeafletMap /> */}
+            <div className="h-screen w-9/12 mx-auto bg-black my-12 overflow-hidden">
+                <LeafletMap />
+            </div>
+            
 
             <section className=" w-9/12 mx-auto">
                 <div className="flex justify-between pt-28 items-center relative md:flex-row flex-col">

@@ -29,7 +29,7 @@ const openNav = () => {
                 </div>
             </div>
 
-            {showBar && <div className='sidebar links h-72 w-full md:hidden block animate__animated animate__bounceInLeft'>
+            {showBar && <div className='sidebar absolute top-24 links h-72 w-full md:hidden block animate__animated animate__bounceInLeft'>
                 <Link to="/portfolio"><h1>Portfolio</h1></Link>
                 <Link to="/about"><h1 className="py-5" >About Us</h1></Link>
                 <Link to="/contact"><h1>Contact</h1></Link>
@@ -37,7 +37,7 @@ const openNav = () => {
             }
 
             <div className="absolute top-0 left-0 md:flex hidden">
-                <div className="pl-20">
+                <div className="xl:pl-20 lg:pl-12 md:pl-8">
                     <div className="hang-down"></div>
                     <h1 className="vertical-group">{title}</h1>
                 </div>

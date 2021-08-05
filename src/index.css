@@ -86,7 +86,7 @@ footer{
 
 /* *********88 HOME ************ */
 .sub-header{
-  color: #3e3f44;
+  color: #58595f;
   /* color: #60636c; */
   font-size: 56px;
   font-weight: 800;
@@ -107,6 +107,10 @@ footer{
   color:#F0F0F5;
 }
 
+.big-team-box{
+  height: 90vh;
+}
+
 .big-team{
   font-size: 56px;
   font-weight: bold;
@@ -117,12 +121,12 @@ footer{
 
 .featured{
   color:#000;
-  font-size: 56px;
+  font-size: 53px;
   font-weight: bold;
 }
 
 .number-count{
-  font-size: 200px;
+  font-size: 194px;
   font-weight: 650;
   color:#F0F0F5;
   opacity: 0.5;
@@ -250,9 +254,6 @@ footer{
 }
 
 
-
-
-/* BREAKPOINTS RESPONSIVENESS */
 .open-control{
   padding:14px 18px 14px 18px ;
   border-radius: 999999px;
@@ -266,6 +267,7 @@ footer{
   text-align: center;
   padding-top: 70px;
   border:1px solid rgb(230, 228, 228);
+  z-index: 9999999999999999999999;
 }
 
 .open-control:hover{
@@ -279,17 +281,80 @@ footer{
 }
 
 
+
+/* BREAKPOINTS RESPONSIVENESS */
 @media screen and (max-width: 1280px) {
   .person-hover:hover .blind{
     display: none;
     cursor: pointer;
   }
+
+  .big-text{
+    font-size: 170px;
+    font-weight: 650;
+    letter-spacing: 12px;
+    color:#F0F0F5;
+  }
+
+  .tablet-view{
+    height: 40vh;
+  }
 }
 
+@media screen and (max-width: 1024px) {
+  .big-text{
+    font-size: 130px;
+    font-weight: 650;
+    letter-spacing: 0px;
+    color:#F0F0F5;
+  }
+
+  .featured{
+    font-size: 45px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .big-text{
+    display: none;
+   }
+
+   .sub-header{
+    color: #4a4b50;
+    font-size: 40px;
+    line-height: 43px;
+  }
+
+  footer{
+    height: fit-content;
+    margin: 0 auto;
+    background: #F0F0F5;
+    padding: 20px 0;
+  }
+  
+  .foot-logo{
+    height: 150px;
+    width: 170px;
+    margin-top: -90px;
+  }
+
+  .links h1{
+    font-size: 18px;
+  }
+}
+
+
+
+/* 640PX  sm */
 @media screen and (max-width: 640px) {
   .open-control{
     padding:0 ;
   }
+
+  .open-control:hover{
+    background: transparent;
+  }
+
   .slider-header{
     font-size: 60px;
     font-weight: bold;
@@ -298,14 +363,30 @@ footer{
   
   .slider-text{
     font-size: 14px;
-    font-weight: 400;
+    font-weight: 500;
     line-height: 24px;
   }
 
   .swipe-div{
-    /* height: 50vh */
+    height: 87vh
   }
+
   .swiper-pagination {
    display: none;
   }
+
+  .big-team-box{
+    height: 80vh;
+  }
+
+  .big-team{
+    font-size: 45px;
+    font-weight: 600;
+  }
+
+  .featured{
+    font-size: 40px;
+  }
+
+  
 }

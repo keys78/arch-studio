@@ -26,7 +26,7 @@ const Home = ({ }) => {
             img:'assets/portfolio/desktop/image-228b.jpg',
             imgT:'assets/portfolio/tablet/image-228b.jpg',
             imgM:'assets/portfolio/mobile/image-228b.jpg',
-            mumb:2,
+            numb:2,
             no_date:true,
             date:"September 2019"
         },
@@ -35,8 +35,8 @@ const Home = ({ }) => {
             category: 'featured', 
             name: 'Le Prototype', 
             img:'assets/portfolio/desktop/image-prototype.jpg',
-            img:'assets/portfolio/desktop/image-prototype.jpg',
-            img:'assets/portfolio/desktop/image-prototype.jpg',
+            imgT:'assets/portfolio/tablet/image-prototype.jpg',
+            imgM:'assets/portfolio/mobile/image-prototype.jpg',
             numb:3,
             no_date:true,
             date:"October 2015"
@@ -52,15 +52,15 @@ const Home = ({ }) => {
             <div className="swipe-div md:w-9/12 sm:w-11/12 w-full mx-auto z-auto"><Swipe /></div>
             
 
-            <section className="w-9/12 mx-auto mt-44">
-                <div className="flex items-end relative pt-24">
-                    <div className="absolute text-9xl left-0 top-0 ">
-                        <div className="w-full mx-auto">
+            <section className="md:w-9/12 w-11/12 mx-auto md:mt-44 sm:mt-16 mt-4">
+                <div className="flex items-end relative md:pt-24 pt-0">
+                    <div className="md:block hidden absolute text-9xl left-0 top-0 ">
+                        <div className="w-9/12">
                             <h1 className="big-text">Welcome</h1>
                         </div>
                     </div>
-                    <div className="w-5/12 ml-60 welcome-area">
-                        <h1 className="sub-header mb-8 mt-20">Welcome to Arch Studio</h1>
+                    <div className="lg:w-5/12 w-11/12 xl:ml-60 ml-0 welcome-area">
+                        <h1 className="sub-header md:mb-8 mb-5 mt-20">Welcome to Arch Studio</h1>
 
                         <p> We have a unique network and skillset to help bring your projects to life.
                             Our small team of highly skilled individuals combined with our large network put us in a strong position
@@ -74,18 +74,18 @@ const Home = ({ }) => {
                         </p>
                     </div>
 
-                    <div className="w-6/12">
+                    <div className="w-6/12 lg:block hidden">
                         <img className="float-right" src={process.env.PUBLIC_URL + 'assets/home/desktop/image-welcome.jpg'} alt="photos"/>
                     </div>
                 </div>
             </section>
 
-            <section className="my-60">
-                <div className="w-9/12 mx-auto relative">
-                    <img className="w-full" src={process.env.PUBLIC_URL + 'assets/home/desktop/image-small-team.jpg'} alt="photos"/>
+            <section className="lg:my-60 my-28">
+                <div className="md:w-9/12 sm:w-11/12 w-full  mx-auto relative">
+                    <img className="w-full big-team-box" src={process.env.PUBLIC_URL + 'assets/home/desktop/image-small-team.jpg'} alt="photos"/>
                     <div className="bg-black w-full h-full opacity-50 absolute top-0"></div>
                     <div className="absolute top-0 left-0 w-full ">
-                        <div className="w-8/12 mx-auto pt-44">
+                        <div className="sm:w-8/12 w-9/12 mx-auto pt-44">
                             <h1 className="big-team mb-10">Small team, <br></br> big ideas</h1>
                             <Link to="/about"><Button text="About Us" className="w-6/12"/></Link>
                         </div>
@@ -93,15 +93,19 @@ const Home = ({ }) => {
                 </div>
             </section>
 
-            <section className="w-9/12 mx-auto mb-40">
-                <div className="flex-between">
+            <section className="md:w-9/12 w-11/12 mx-auto mb-40">
+                <div className="flex-between mb-3">
                     <h1 className="featured">Featured</h1>
-                    <Link to="/portfolio"><Button text="See All"/></Link>
+                    <Link className="sm:block hidden" to="/portfolio"><Button text="See All "/></Link>
                 </div>
 
                 <div>
                     <Data portfolios={portfolios.filter((portfolio) => portfolio.category === "featured")} view="View All Projects"/>
                 </div>
+                <div className="flex justify-end mt-5 w-full">
+                    <Link className="sm:hidden" to="/portfolio"><Button className="mt-5" text="See All "/></Link>
+                </div>
+                
             </section>
             
             <Footer />

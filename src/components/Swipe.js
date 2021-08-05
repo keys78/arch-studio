@@ -72,19 +72,15 @@ const Swipe = () => {
         
         {(slides.map((slide) => (
           <SwiperSlide key={slide.id}>
-          <div className="h-screen relative w-full bg-black">
+          <div className="h-screen swipe-div relative w-full bg-black">
               <img src={ slide.img } />
               <div className="bg-black w-full h-full opacity-30 absolute top-0"></div>
               <div className="absolute w-full h-full top-0 left-0">
-                  <div className="md:w-8/12 w-11/12 mx-auto md:pt-40 pt-28">
-                    <div className="md:w-8/12 w-11/12">
+                  <div className="xl:w-8/12 md:w-10/12 w-11/12 mx-auto md:pt-40 pt-28">
+                    <div className="xl:w-8/12 md:w-10/12 w-11/12">
                       <h1 className="slider-header mb-5"> { slide.name }</h1>
                       <p className="slider-text mb-8">{ slide.text }</p>
                       <Link to="/portfolio">
-                        {/* <button className="global-btn w-10/12 flex gap-0 items-center">
-                          <h1 className="w-8/12"> See Our Portfolio </h1> 
-                          <h1><i class="fas fa-arrow-right"></i></h1>
-                        </button> */}
                         <Button text="View "/>
                       </Link>
                     </div>

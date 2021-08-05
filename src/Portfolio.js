@@ -49,7 +49,7 @@ const Portfolio = () => {
             img:'assets/portfolio/desktop/image-228b.jpg',
             imgT:'assets/portfolio/tablet/image-228b.jpg',
             imgM:'assets/portfolio/mobile/image-228b.jpg',
-            // mumb:2,
+            // numb:2,
             date:"September 2019"
         },
         {
@@ -57,8 +57,8 @@ const Portfolio = () => {
             category: 'featured', 
             name: 'Le Prototype', 
             img:'assets/portfolio/desktop/image-prototype.jpg',
-            img:'assets/portfolio/desktop/image-prototype.jpg',
-            img:'assets/portfolio/desktop/image-prototype.jpg',
+            imgT:'assets/portfolio/desktop/image-prototype.jpg',
+            imgM:'assets/portfolio/desktop/image-prototype.jpg',
             // numb:3,
             date:"October 2015"
         },
@@ -125,7 +125,7 @@ const Portfolio = () => {
     return ( 
         <div>
             <Header title="PORTFOLIO"/>
-            <div className="w-9/12 mx-auto mb-40">
+            <div className="md:w-9/12 w-11/12 mx-auto mb-40">
                 <Data portfolios={portfolios} />
             </div>
             <Footer />

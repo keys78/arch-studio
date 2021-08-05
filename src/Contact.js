@@ -69,8 +69,8 @@ const Contact = () => {
                     <div className="w-4/12 cd">
                         <h1 className="font-bold">Office II</h1>
                         <h1>Mail: archone@mail.com</h1>
-                        <h1>Address : 1892 Chenoweth Drive TN</h1>
-                        <h1>Phone : 123-456-3451</h1>
+                        <h1>Address : 3399 Wines Lane TX</h1>
+                        <h1>Phone : 832-123-4321</h1>
                         <div className="flex items-center gap-5">
                             <h1>View on Map </h1>
                             <img src={process.env.PUBLIC_URL + '/assets/icons/icon-arrow -black.svg'} alt="arrow-right"/>

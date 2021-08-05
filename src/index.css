@@ -320,9 +320,11 @@ footer{
    }
 
    .sub-header{
-    color: #4a4b50;
+    /* color: #4a4b50; */
+    color:black;
     font-size: 40px;
     line-height: 43px;
+    font-weight: 700;
   }
 
   footer{
@@ -340,6 +342,11 @@ footer{
 
   .links h1{
     font-size: 18px;
+  }
+
+  .about-hero{
+    height: 60vh;
+    width: 97vw;
   }
 }
 

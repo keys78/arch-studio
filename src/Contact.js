@@ -79,7 +79,7 @@ const Contact = () => {
                 </div>
             </section>
 
-            <div className="h-screen w-9/12 mx-auto bg-black my-12 overflow-hidden">
+            <div className="mapie w-9/12 mx-auto bg-black my-12 overflow-hidden">
                 <LeafletMap />
             </div>
             

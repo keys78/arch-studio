@@ -1,7 +1,45 @@
 import Footer from "./components/Footer"
 import Header from "./components/Header"
+import { useState } from "react"
 
 const About = () => {
+    const [members] = useState([
+        {
+            id: 1,
+            name:'Jake Richards',
+            position:'Chief Architect',
+            img:'assets/about/desktop/avatar-jake.jpg',
+            twitterIcon:'assets/icons/icon-twitter.svg',
+            linkedinIcon:'assets/icons/icon-linkedin.svg',
+        },
+        {
+            id: 2,
+            name:'Thompson Smith',
+            position:'Head Of Finance',
+            img:'assets/about/desktop/avatar-thompson.jpg',
+            twitterIcon:'assets/icons/icon-twitter.svg',
+            linkedinIcon:'assets/icons/icon-linkedin.svg',
+        },
+        {
+            id: 3,
+            name:'Jackson Rourke',
+            position:'Lead Designer',
+            img:'assets/about/desktop/avatar-jackson.jpg',
+            twitterIcon:'assets/icons/icon-twitter.svg',
+            linkedinIcon:'assets/icons/icon-linkedin.svg',
+        },
+        {
+            id: 4,
+            name:'Maria Simpson',
+            position:'Senior Architect',
+            img:'assets/about/desktop/avatar-maria.jpg',
+            twitterIcon:'assets/icons/icon-twitter.svg',
+            linkedinIcon:'assets/icons/icon-linkedin.svg',
+        },
+        
+
+    ])
+
     return ( 
         <div>
             <Header title="ABOUT US"/>
@@ -54,51 +92,25 @@ const About = () => {
                     <div className="w-4/12">
                         <h1 className="sub-header">The <br></br> Leaders</h1>
                     </div>
+                    
                     <div className="grid grid-cols-2 gap-8 w-7/12">
-                        <div className="person-hover relative">
-                            <img src={process.env.PUBLIC_URL + 'assets/about/desktop/avatar-jake.jpg'} alt="photos"/>
-                            <h1 className="text-xl pt-5 font-bold">Jake Richards</h1>
-                            <h3 className="text-base font-medium opacity-70">Chief Architect</h3>
-                            <div className="blind absolute top-0 left-0 w-full h-full bg-white opacity-60 pt-28 pl-40">
-                                <div className="flex gap-4">
-                                    <img className="max-w-7xl" src={process.env.PUBLIC_URL + 'assets/icons/icon-twitter.svg'} alt="twitter-icons"/>
-                                    <img className="max-w-7xl" src={process.env.PUBLIC_URL + 'assets/icons/icon-linkedin.svg'} alt="twitter-icons"/>
+                        {members.map(member => (
+                            <div key={ member.id } className="person-hover relative">
+                                <img src={ member.img } alt="photos"/>
+                                <h1 className="text-xl pt-5 font-bold">{ member.name }</h1>
+                                <h3 className="text-base font-medium opacity-70">{ member.position }</h3>
+                                <div className="xl:hidden block flex gap-4 mt-2">
+                                        <img className="w-6" src={ member.twitterIcon } alt="twitter-icons"/>
+                                        <img className="w-6" src={ member.linkedinIcon } alt="twitter-icons"/>
+                                    </div>
+                                <div className="xl:block hidden blind absolute top-0 left-0 w-full h-full bg-white opacity-60 pt-28 pl-28">
+                                    <div className="flex gap-4">
+                                        <img className="max-w-7xl" src={ member.twitterIcon } alt="twitter-icons"/>
+                                        <img className="max-w-7xl" src={ member.linkedinIcon } alt="twitter-icons"/>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div className="person-hover relative">
-                            <img src={process.env.PUBLIC_URL + 'assets/about/desktop/avatar-thompson.jpg'} alt="photos"/>
-                            <h1 className="text-xl pt-5 font-bold">Jake Richards</h1>
-                            <h3 className="text-base font-medium opacity-70">Head Of Finance</h3>
-                            <div className="blind absolute top-0 left-0 w-full h-full bg-white opacity-60 pt-28 pl-40">
-                                <div className="flex gap-4">
-                                    <img className="max-w-7xl" src={process.env.PUBLIC_URL + 'assets/icons/icon-twitter.svg'} alt="twitter-icons"/>
-                                    <img className="max-w-7xl" src={process.env.PUBLIC_URL + 'assets/icons/icon-linkedin.svg'} alt="twitter-icons"/>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="person-hover relative">
-                            <img src={process.env.PUBLIC_URL + 'assets/about/desktop/avatar-jackson.jpg'} alt="photos"/>
-                            <h1 className="text-xl pt-5 font-bold">Jake Richards</h1>
-                            <h3 className="text-base font-medium opacity-70">Lead Designer</h3>
-                            <div className="blind absolute top-0 left-0 w-full h-full bg-white opacity-60 pt-28 pl-40">
-                                <div className="flex gap-4">
-                                    <img className="max-w-7xl" src={process.env.PUBLIC_URL + 'assets/icons/icon-twitter.svg'} alt="twitter-icons"/>
-                                    <img className="max-w-7xl" src={process.env.PUBLIC_URL + 'assets/icons/icon-linkedin.svg'} alt="twitter-icons"/>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="person-hover relative">
-                            <img src={process.env.PUBLIC_URL + 'assets/about/desktop/avatar-maria.jpg'} alt="photos"/>
-                            <h1 className="text-xl pt-5 font-bold">Jake Richards</h1>
-                            <h3 className="text-base font-medium opacity-70">Senior Architect</h3>
-                            <div className="blind absolute top-0 left-0 w-full h-full bg-white opacity-60 pt-28 pl-40">
-                                <div className="flex gap-4">
-                                    <img className="max-w-7xl" src={process.env.PUBLIC_URL + 'assets/icons/icon-twitter.svg'} alt="twitter-icons"/>
-                                    <img className="max-w-7xl" src={process.env.PUBLIC_URL + 'assets/icons/icon-linkedin.svg'} alt="twitter-icons"/>
-                                </div>
-                            </div>
-                        </div>
+                        ))}
                     </div>
                 </div>
             </section>

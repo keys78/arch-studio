@@ -66,8 +66,8 @@ const Swipe = () => {
           "delay": 4000,
           "disableOnInteraction": false
         }}
-        onSlideChange={() => console.log('slide change')}
-        onSwiper={(swiper) => console.log(swiper)}
+        // onSlideChange={() => console.log('slide change')}
+        // onSwiper={(swiper) => console.log(swiper)}
       >
         
         {(slides.map((slide) => (
@@ -76,8 +76,8 @@ const Swipe = () => {
               <img src={ slide.img } />
               <div className="bg-black w-full h-full opacity-30 absolute top-0"></div>
               <div className="absolute w-full h-full top-0 left-0">
-                  <div className="w-8/12 mx-auto pt-40">
-                    <div className="w-8/12">
+                  <div className="md:w-8/12 w-11/12 mx-auto md:pt-40 pt-28">
+                    <div className="md:w-8/12 w-11/12">
                       <h1 className="slider-header mb-5"> { slide.name }</h1>
                       <p className="slider-text mb-8">{ slide.text }</p>
                       <Link to="/portfolio">
@@ -85,7 +85,7 @@ const Swipe = () => {
                           <h1 className="w-8/12"> See Our Portfolio </h1> 
                           <h1><i class="fas fa-arrow-right"></i></h1>
                         </button> */}
-                        <Button />
+                        <Button text="View "/>
                       </Link>
                     </div>
                   </div>

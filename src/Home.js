@@ -49,7 +49,7 @@ const Home = ({ }) => {
     return ( 
         <div>
             <Header title="HOME"/>
-            <div className="w-9/12 mx-auto z-auto"><Swipe /></div>
+            <div className="swipe-div md:w-9/12 sm:w-11/12 w-full mx-auto z-auto"><Swipe /></div>
             
 
             <section className="w-9/12 mx-auto mt-44">

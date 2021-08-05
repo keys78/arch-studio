@@ -148,7 +148,14 @@ footer{
 
 .blind{
   display: none;
+  animation: fadein 1s;
 }
+
+@keyframes fadein {
+  0% { opacity: 0.1; }
+  50%   { opacity: 0.6; }
+}
+
 
 .person-hover:hover .blind{
   display: block;
@@ -161,7 +168,7 @@ footer{
   color:#49494e;
   font-weight: 500;
   line-height: 3rem;
-  font-size: 18px;
+  font-size: 16px;
 }
 
 .input-group{
@@ -236,4 +243,69 @@ footer{
 .leaflet-container{
   width: 100vw;
   height: 100vh;
+}
+
+.mapie{
+  height: 74vh;
+}
+
+
+
+
+/* BREAKPOINTS RESPONSIVENESS */
+.open-control{
+  padding:14px 18px 14px 18px ;
+  border-radius: 999999px;
+  cursor: pointer;
+  /* animation: fade 1s; */
+}
+
+.sidebar{
+  background: #f0f0f5;
+  color:rgb(29, 29, 29);
+  text-align: center;
+  padding-top: 70px;
+  border:1px solid rgb(230, 228, 228);
+}
+
+.open-control:hover{
+  background: rgb(235, 235, 235);
+  animation: fade 1s;
+}
+
+@keyframes fade {
+  0% { opacity: 0.4; }
+  100%   { opacity: 1; }
+}
+
+
+@media screen and (max-width: 1280px) {
+  .person-hover:hover .blind{
+    display: none;
+    cursor: pointer;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .open-control{
+    padding:0 ;
+  }
+  .slider-header{
+    font-size: 60px;
+    font-weight: bold;
+    line-height: 70px;
+  }
+  
+  .slider-text{
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+
+  .swipe-div{
+    /* height: 50vh */
+  }
+  .swiper-pagination {
+   display: none;
+  }
 }

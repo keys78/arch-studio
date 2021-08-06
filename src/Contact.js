@@ -1,4 +1,3 @@
-// import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
 import Footer from "./components/Footer"
 import Header from "./components/Header"
 import LeafletMap from "./components/LeafletMap"
@@ -28,17 +27,18 @@ const Contact = () => {
     return ( 
         <div>
             <Header title="CONTACT"/>
-            <section className="md:w-9/12 w-11/12 mx-auto">
-                <div className="flex md:flex-row flex-col">
-                    <div className="xl:w-6/12 lg:w-5/12 w-3/12">
-                        <img className="max-w-7xl" src={process.env.PUBLIC_URL + 'assets/contact/desktop/image-hero.jpg'} alt="photos"/>
+            <section className="md:w-9/12 sm:w-11/12 w-full mx-auto">
+                <div className="flex md:items-end md:flex-row flex-col">
+                    <div className="xl:w-6/12 w-9/12">
+                        <img className="max-w-7xl md:block hidden" src={process.env.PUBLIC_URL + 'assets/contact/desktop/image-hero.jpg'} alt="photos"/>
+                        <img className="max-w-7xl about-hero md:hidden block" src={process.env.PUBLIC_URL + 'assets/contact/tablet/image-hero.jpg'} alt="photos" />
                     </div>
-                    <div className="relative flex flex-col flex-end">
-                        <h1 className="-ml-52 big-text">Contact</h1>
-                        <div className="bg-white -ml-40">
-                            <div className="w-7/12 py-36 mx-auto">
-                                <h1 className="sub-header mb-16 text-black">Tell us about your project</h1>
-                                <p> We’d love to hear more about your project. Please,
+                    <div className="flex flex-col flex-end">
+                        <h1 className="xl:-ml-52 lg:-ml-72 -ml-96 big-text">Contact</h1>
+                        <div className="bg-white whitey md:w-full w-11/12 -mt-12 xl:-ml-48 lg:-ml-72 md:-ml-96 -ml-0 ml-0">
+                            <div className="md:w-10/12 w-11/12 md:py-20 py-16 mx-auto">
+                                <h1 className="sub-header lg:mb-16 mb-6 text-black">Tell us about your project</h1>
+                                <p className="p-text"> We’d love to hear more about your project. Please,
                                     leave a message below or give us a call. We have two
                                     offices, one in Texas and one in Tennessee. If you find
                                     yourself nearby, come say hello!
@@ -50,13 +50,13 @@ const Contact = () => {
                 </div>
             </section>
 
-            <section className="md:w-9/12 w-11/12 mx-auto my-32">
-                <div><p class="border-gray-600 border-b w-28"></p></div>
-                <div className="flex justify-between pt-28 items-center relative md:flex-row flex-col">
-                    <div className="w-4/12">
-                        <h1 className="sub-header mb-16 text-black">Contact Details</h1>
+            <section className="md:w-9/12 w-11/12 mx-auto md:my-32">
+            <div><p class="md:block hidden lg:mb-0 mb-10 border-gray-600 border-b lg:w-28 w-16"></p></div>
+                <div className="flex justify-between lg:pt-28 items-center relative lg:flex-row flex-col">
+                    <div className="lg:w-4/12 w-full">
+                        <h1 className="sub-header lg:mb-16 mb-6 text-black">Contact Details</h1>
                     </div>
-                    <div className="w-4/12 cd">
+                    <div className="lg:w-4/12 w-full cd">
                         <h1 className="font-bold">Main Office</h1>
                         <h1>Mail: archone@mail.com</h1>
                         <h1>Address : 1892 Chenoweth Drive TN</h1>
@@ -66,7 +66,7 @@ const Contact = () => {
                             <img src={process.env.PUBLIC_URL + '/assets/icons/icon-arrow -black.svg'} alt="arrow-right"/>
                         </div>
                     </div>
-                    <div className="w-4/12 cd">
+                    <div className="lg:w-4/12 w-full cd lg:mt-0 mt-8">
                         <h1 className="font-bold">Office II</h1>
                         <h1>Mail: archone@mail.com</h1>
                         <h1>Address : 3399 Wines Lane TX</h1>
@@ -79,19 +79,20 @@ const Contact = () => {
                 </div>
             </section>
 
-            <div className="mapie w-9/12 mx-auto bg-black my-12 overflow-hidden">
+            <div className="mapie md:w-9/12 w-full mx-auto bg-black my-12 overflow-hidden">
                 <LeafletMap />
             </div>
             
 
-            <section className=" w-9/12 mx-auto">
-                <div className="flex justify-between pt-28 items-center relative md:flex-row flex-col">
-                    <div className="w-4/12">
-                        <h1 className="sub-header mb-16 text-black">Connect <br></br> With Us</h1>
+            <section className="md:w-9/12 w-11/12 mx-auto">
+                <div className="flex justify-between md:pt-28 pt-10 items-center relative md:flex-row flex-col">
+                    <div className="md:w-4/12 w-full">
+                        <h1 className="sub-header md:block hidden lg:mb-16 mb-6 text-black">Connect <br></br> With Us</h1>
+                        <h1 className="sub-header lg:mb-16 md:hidden block mb-6 text-black">Connect With Us</h1>
                     </div>
 
                     
-                    <form onSubmit={validateForm} className="w-7/12 cd">
+                    <form onSubmit={validateForm} className="md:w-7/12 w-full cd">
                         <div className="flex-between">
                             <label className="el-label">Name</label>
                             <p className="text-xs text-red-500 font-bold">{ errorMessage }</p>
@@ -117,7 +118,7 @@ const Contact = () => {
                             className="input-group focus:outline-none"
                         />
 
-                        <div className="flex justify-end mt-5">
+                        <div className="flex justify-end md:mt-5 mt-2 md:mb-0 mb-20">
                             <Button type="submit" className="" text=""/>
                         </div>
                     </form>

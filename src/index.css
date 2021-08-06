@@ -280,6 +280,9 @@ footer{
   100%   { opacity: 1; }
 }
 
+.p-text{
+  font-weight: 500;
+}
 
 
 /* BREAKPOINTS RESPONSIVENESS */
@@ -311,6 +314,10 @@ footer{
 
   .featured{
     font-size: 45px;
+  }
+
+  .whitey{
+    width: 80vw;
   }
 }
 
@@ -346,7 +353,14 @@ footer{
 
   .about-hero{
     height: 60vh;
-    width: 97vw;
+    width: 100vw;
+  }
+  .whitey{
+    width: 90vw;
+  }
+  .cd{
+    line-height: 2rem;
+    font-size: 15px;
   }
 }
 
@@ -393,6 +407,11 @@ footer{
 
   .featured{
     font-size: 40px;
+  }
+
+  .sub-header{
+    font-size: 30px;
+    font-weight: 700;
   }
 
   

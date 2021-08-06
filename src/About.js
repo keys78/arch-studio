@@ -44,17 +44,17 @@ const About = () => {
         <div>
             <Header title="ABOUT US" />
             <section className="md:w-9/12 sm:w-11/12 w-full mx-auto">
-                <div className="flex md:flex-row flex-col">
-                    <div className="xl:w-6/12 lg:w-5/12 w-full">
+                <div className="flex md:items-end md:flex-row flex-col">
+                    <div className="xl:w-6/12 w-9/12">
                         <img className="max-w-7xl md:block hidden" src={process.env.PUBLIC_URL + 'assets/about/desktop/image-hero.jpg'} alt="photos" />
                         <img className="max-w-7xl about-hero md:hidden block" src={process.env.PUBLIC_URL + 'assets/about/tablet/image-hero.jpg'} alt="photos" />
                     </div>
-                    <div className="relative flex flex-col flex-end">
-                        <h1 className="-ml-12 big-text">About</h1>
-                        <div className="bg-white w-11/12 -mt-12 md:-ml-40 ml-0">
-                            <div className="md:w-7/12 w-11/12 md:py-36 py-16 mx-auto">
+                    <div className="flex flex-col flex-end">
+                        <h1 className="xl:-ml-12 lg:-ml-48 md:-ml-96 -ml-0 big-text">About</h1>
+                        <div className="bg-white whitey md:w-full -mt-12 w-11/12 xl:-mt-12 md:-ml-48 md:-ml-96 -ml-0">
+                            <div className=" md:w-10/12 w-11/12 md:py-20 py-16 mx-auto">
                                 <h1 className="sub-header lg:mb-16 mb-6 text-black">Your team of professionals</h1>
-                                <p> Our small team of world-class professionals will work
+                                <p className="p-text"> Our small team of world-class professionals will work
                                     with you every step of the way. Strong relationships are
                                     at the core of everything we do. This extends to the
                                     relationship our projects have with their surroundings.
@@ -66,20 +66,21 @@ const About = () => {
                 </div>
             </section>
 
-            <section className="md:w-9/12 w-11/12 mx-auto lg:mt-0 mt-10">
+            <section className="md:w-9/12 w-11/12 mx-auto md:mt-40 mt-0">
                 <div><p class="md:block hidden lg:mb-0 mb-10 border-gray-600 border-b lg:w-28 w-16"></p></div>
                 <div className="flex items-center relative md:flex-row flex-col">
-                    <div className="">
-                        <h1 className="sub-header lg:mb-16 mb-6 text-black">Our <br></br> Heritage</h1>
-                        <p>Founded in 2007, we started as a trio of architects. Our complimentary
+                    <div>
+                        <h1 className="sub-header md:block hidden lg:mb-16 mb-6 text-black">Our <br></br> Heritage</h1>
+                        <h1 className="sub-header md:hidden block lg:mb-16 mb-6 text-black">Our Heritage</h1>
+                        <p className="p-text">Founded in 2007, we started as a trio of architects. Our complimentary
                             skills and relentless attention to detail turned Arch into one of the most sought
                             after boutique firms in the country.
                         </p>
-                        <p className="py-5">Speciliazing in Urban Design allowed us to focus on creating
+                        <p className="py-5 p-text">Speciliazing in Urban Design allowed us to focus on creating
                             exceptional structures that live in harmony with their surroundings. We consider every
                             detail from every surrounding element to inform our designs.
                         </p>
-                        <p>Our small team of world-class professionals provides input on every project.</p>
+                        <p className="p-text">Our small team of world-class professionals provides input on every project.</p>
                     </div>
 
                     <div className="xl:w-6/12 lg:w-5/12 w-3/12 lg:block hidden">
@@ -88,10 +89,11 @@ const About = () => {
                 </div>
             </section>
 
-            <section className="md:w-9/12 w-11/12 mx-auto lg:my-60 my-0 mt-24 mb-44">
+            <section className="md:w-9/12 w-11/12 mx-auto lg:my-60 my-0 md:mt-24 mt-20 mb-44">
                 <div className="flex lg:flex-row flex-col justify-between">
-                    <div className="w-4/12">
-                        <h1 className="sub-header lg:pb-0 pb-12">The <br></br> Leaders</h1>
+                    <div className="md:w-4/12">
+                        <h1 className="sub-header md:block hidden lg:pb-0 pb-8">The <br></br> Leaders</h1>
+                        <h1 className="sub-header md:hidden block lg:pb-0 pb-8">The Leaders</h1>
                     </div>
 
                     <div className="grid sm:grid-cols-2 grid-cols-1 gap-8 lg:w-7/12 md:w-11/12 sm:w-9/12 w-full mx-auto">

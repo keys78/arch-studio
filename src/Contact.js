@@ -21,7 +21,9 @@ const Contact = () => {
         } else {
             alert('Submitted')
         }
-        console.log("HELLO")
+        setName('')
+        setEmail('')
+        setMessage('')
     }
     
     return ( 

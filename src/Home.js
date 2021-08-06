@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import Button from "./components/Button";
 import Data from "./components/data";
@@ -6,7 +7,8 @@ import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Swipe from "./components/Swipe";
 
-const Home = ({ }) => {
+
+const Home = () => {
     const [portfolios] = useState([
         {
             id: 5,
@@ -43,20 +45,21 @@ const Home = ({ }) => {
         },
     ]);
 
-
+    
+   
 
 
     return ( 
         <div>
-            <Header title="HOME"/>
+            <Header title="HOME" data-aos="fade-right"/>
             <div className="swipe-div md:w-9/12 sm:w-11/12 w-full mx-auto z-auto"><Swipe /></div>
             
 
-            <section className="md:w-9/12 w-11/12 mx-auto md:mt-44 sm:mt-16 mt-4">
+            <section data-aos="fade-right" className="md:w-9/12 w-11/12 mx-auto md:mt-44 sm:mt-16 mt-4">
                 <div className="flex items-end relative md:pt-24 pt-0">
                     <div className="md:block hidden absolute text-9xl left-0 top-0 ">
                         <div className="w-9/12">
-                            <h1 className="big-text">Welcome</h1>
+                            <h1 data-aos="fade-left" className="big-text">Welcome</h1>
                         </div>
                     </div>
                     <div className="lg:w-5/12 w-11/12 xl:ml-60 ml-0 welcome-area">
@@ -80,7 +83,7 @@ const Home = ({ }) => {
                 </div>
             </section>
 
-            <section className="lg:my-60 my-28">
+            <section data-aos="fade-right" className="lg:my-60 my-28">
                 <div className="md:w-9/12 sm:w-11/12 w-full  mx-auto relative">
                     <img className="w-full big-team-box" src={process.env.PUBLIC_URL + 'assets/home/desktop/image-small-team.jpg'} alt="photos"/>
                     <div className="bg-black w-full h-full opacity-50 absolute top-0"></div>
@@ -95,15 +98,15 @@ const Home = ({ }) => {
 
             <section className="md:w-9/12 w-11/12 mx-auto mb-40">
                 <div className="flex-between mb-3">
-                    <h1 className="featured">Featured</h1>
-                    <Link className="sm:block hidden" to="/portfolio"><Button text="See All "/></Link>
+                    <h1 data-aos="fade-left" className="featured">Featured</h1>
+                    <Link data-aos="fade-right" className="sm:block hidden" to="/portfolio"><Button  text="See All "/></Link>
                 </div>
 
-                <div>
+                <div data-aos="flip-left">
                     <Data portfolios={portfolios.filter((portfolio) => portfolio.category === "featured")} view="View All Projects"/>
                 </div>
                 <div className="flex justify-end mt-5 w-full">
-                    <Link className="sm:hidden" to="/portfolio"><Button className="mt-5" text="See All "/></Link>
+                    <Link data-aos="fade-right" className="sm:hidden" to="/portfolio"><Button data-aos="fade-right" className="mt-5" text="See All "/></Link>
                 </div>
                 
             </section>

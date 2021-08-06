@@ -14,15 +14,15 @@ const openNav = () => {
         <header className="relative">
             <div className="md:w-9/12 w-11/12 mx-auto md:py-16 py-8">
                 <div className="flex items-center justify-between xl:w-6/12 lg:w-8/12 md:w-11/12 w-full">
-                    <Link to="/" className="w-4/12">
+                    <Link to="/" data-aos="fade-right" className="w-4/12">
                         <img src={process.env.PUBLIC_URL + '/assets/logo.svg'} alt="arch-studio logo" />
                     </Link>
-                    <div className="md:flex hidden links flex justify-between items-center w-8/12">
+                    <div data-aos="fade-left" className="md:flex hidden links flex justify-between items-center w-8/12">
                         <Link to="/portfolio"><h1>Portfolio</h1></Link>
                         <Link to="/about"><h1>About Us</h1></Link>
                         <Link to="/contact"><h1>Contact</h1></Link>
                     </div>
-                    <div onClick={openNav} className="md:hidden block open-control">
+                    <div data-aos="fade-left" onClick={openNav} className="md:hidden block open-control">
                         {!showBar && <img src='/assets/icons/icon-hamburger.svg' alt="hamburger"/> }
                         {showBar && <img src='/assets/icons/icon-close.svg' alt="hamburger"/> }
                     </div>
@@ -39,7 +39,7 @@ const openNav = () => {
             <div className="absolute top-0 left-0 md:flex hidden">
                 <div className="xl:pl-20 lg:pl-12 md:pl-8">
                     <div className="hang-down"></div>
-                    <h1 className="vertical-group">{title}</h1>
+                    <h1 data-aos="zoom-out" className="vertical-group">{title}</h1>
                 </div>
             </div>
         </header>

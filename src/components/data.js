@@ -5,7 +5,7 @@ const Data = ({ portfolios, view }) => {
     return ( 
         <Link to="/portfolio" className="featured-display grid xl:grid-cols-3 grid-cols-1 gap-8">
             {(portfolios.map((portfolio) => (
-                <div className="relative overflow-x-hidden" key={ portfolio.id }>
+                <div data-aos="fade-up" className="relative overflow-x-hidden" key={ portfolio.id }>
                     <img className="w-full xl:block hidden" src={process.env.PUBLIC_URL + portfolio.img} alt="photos"/>
                     <img className="w-full xl:hidden block tablet-view" src={process.env.PUBLIC_URL + portfolio.imgT} alt="photos"/>
 

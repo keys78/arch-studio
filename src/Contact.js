@@ -29,7 +29,7 @@ const Contact = () => {
     return ( 
         <div>
             <Header title="CONTACT"/>
-            <section className="md:w-9/12 sm:w-11/12 w-full mx-auto">
+            <section data-aos="fade-left" className="md:w-9/12 sm:w-11/12 w-full mx-auto">
                 <div className="flex md:items-end md:flex-row flex-col">
                     <div className="xl:w-6/12 w-9/12">
                         <img className="max-w-7xl md:block hidden" src={process.env.PUBLIC_URL + 'assets/contact/desktop/image-hero.jpg'} alt="photos"/>
@@ -54,7 +54,7 @@ const Contact = () => {
 
             <section className="md:w-9/12 w-11/12 mx-auto md:my-32">
             <div><p class="md:block hidden lg:mb-0 mb-10 border-gray-600 border-b lg:w-28 w-16"></p></div>
-                <div className="flex justify-between lg:pt-28 items-center relative lg:flex-row flex-col">
+                <div data-aos="fade-up" className="flex justify-between lg:pt-28 items-center relative lg:flex-row flex-col">
                     <div className="lg:w-4/12 w-full">
                         <h1 className="sub-header lg:mb-16 mb-6 text-black">Contact Details</h1>
                     </div>
@@ -81,12 +81,12 @@ const Contact = () => {
                 </div>
             </section>
 
-            <div className="mapie md:w-9/12 w-full mx-auto bg-black my-12 overflow-hidden">
+            <div data-aos="zoom-in" className="mapie md:w-9/12 w-full mx-auto bg-black my-12 overflow-hidden">
                 <LeafletMap />
             </div>
             
 
-            <section className="md:w-9/12 w-11/12 mx-auto">
+            <section data-aos="fade-up" className="md:w-9/12 w-11/12 mx-auto">
                 <div className="flex justify-between md:pt-28 pt-10 items-center relative md:flex-row flex-col">
                     <div className="md:w-4/12 w-full">
                         <h1 className="sub-header md:block hidden lg:mb-16 mb-6 text-black">Connect <br></br> With Us</h1>

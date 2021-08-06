@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+.signature{
+  font-family: 'MonteCarlo', cursive;
+}
+
 body{
   font-family: 'Spartan', sans-serif;
 }

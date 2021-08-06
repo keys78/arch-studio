@@ -43,7 +43,7 @@ const About = () => {
     return (
         <div>
             <Header title="ABOUT US" />
-            <section className="md:w-9/12 sm:w-11/12 w-full mx-auto">
+            <section data-aos="fade-left" className="md:w-9/12 sm:w-11/12 w-full mx-auto">
                 <div className="flex md:items-end md:flex-row flex-col">
                     <div className="xl:w-6/12 w-9/12">
                         <img className="max-w-7xl md:block hidden" src={process.env.PUBLIC_URL + 'assets/about/desktop/image-hero.jpg'} alt="photos" />
@@ -69,7 +69,7 @@ const About = () => {
             <section className="md:w-9/12 w-11/12 mx-auto md:mt-40 mt-0">
                 <div><p class="md:block hidden lg:mb-0 mb-10 border-gray-600 border-b lg:w-28 w-16"></p></div>
                 <div className="flex items-center relative md:flex-row flex-col">
-                    <div>
+                    <div data-aos="fade-left">
                         <h1 className="sub-header md:block hidden lg:mb-16 mb-6 text-black">Our <br></br> Heritage</h1>
                         <h1 className="sub-header md:hidden block lg:mb-16 mb-6 text-black">Our Heritage</h1>
                         <p className="p-text">Founded in 2007, we started as a trio of architects. Our complimentary
@@ -83,13 +83,13 @@ const About = () => {
                         <p className="p-text">Our small team of world-class professionals provides input on every project.</p>
                     </div>
 
-                    <div className="xl:w-6/12 lg:w-5/12 w-3/12 lg:block hidden">
+                    <div data-aos="fade-right" className="xl:w-6/12 lg:w-5/12 w-3/12 lg:block hidden">
                         <img className="max-w-7xl" src={process.env.PUBLIC_URL + 'assets/about/desktop/image-heritage.jpg'} alt="photos" />
                     </div>
                 </div>
             </section>
 
-            <section className="md:w-9/12 w-11/12 mx-auto lg:my-60 my-0 md:mt-24 mt-20 mb-44">
+            <section data-aos="fade-left" className="md:w-9/12 w-11/12 mx-auto lg:my-60 my-0 md:mt-24 mt-20 mb-44">
                 <div className="flex lg:flex-row flex-col justify-between">
                     <div className="md:w-4/12">
                         <h1 className="sub-header md:block hidden lg:pb-0 pb-8">The <br></br> Leaders</h1>
@@ -98,7 +98,7 @@ const About = () => {
 
                     <div className="grid sm:grid-cols-2 grid-cols-1 gap-8 lg:w-7/12 md:w-11/12 sm:w-9/12 w-full mx-auto">
                         {members.map(member => (
-                            <div key={member.id} className="person-hover relative">
+                            <div data-aos="fade-up" key={member.id} className="person-hover relative">
                                 <img src={member.img} alt="photos" />
                                 <h1 className="text-xl md:pt-5 pt-2 font-bold">{member.name}</h1>
                                 <h3 className="text-base font-medium opacity-70">{member.position}</h3>

@@ -39,7 +39,7 @@ const openNav = () => {
             <div className="absolute top-0 left-0 md:flex hidden">
                 <div className="xl:pl-20 lg:pl-12 md:pl-8">
                     <div className="hang-down"></div>
-                    <h1 data-aos="zoom-out" className="vertical-group">{title}</h1>
+                    <h1 data-aos="zoom-out" data-aos-duration="3000" className="vertical-group">{title}</h1>
                 </div>
             </div>
         </header>

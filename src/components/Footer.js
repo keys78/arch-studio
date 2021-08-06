@@ -19,7 +19,7 @@ const Footer = () => {
                     </div>
                 </div>
             </div>
-
+            <h6 class="absolute bottom-0 right-4 signature text-grey-400 text-lg font-medium text-right">| Coded by <a class="text-green-600" href="https://github.com/Em-codes/arch-studio">Em_codes</a></h6>
         </footer>
     );
 }

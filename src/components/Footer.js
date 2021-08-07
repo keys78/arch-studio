@@ -13,13 +13,13 @@ const Footer = () => {
                     <Link className="md:py-0 py-4" to="/about"><h1>About Us</h1></Link>
                     <Link to="/contact"><h1>Contact</h1></Link>
                 </div>
-                <div className="md:absolute top-16 -right-10">
+                <div className="md:absolute top-16 md:mb-0 mb-6 -right-10">
                     <div className="w-full">
                         <Link to="/portfolio"><Button text={"See Our Portfolio"} /></Link>
                     </div>
                 </div>
             </div>
-            <h6 class="absolute bottom-0 right-4 mt-3 signature text-grey-400 text-lg font-medium text-right">| Coded by <a class="text-green-600" href="https://github.com/Em-codes/arch-studio">Em_codes</a></h6>
+            <h6 class="absolute bottom-0 right-4  signature text-grey-400 text-lg font-medium text-right">| Coded by <a class="text-green-600" href="https://github.com/Em-codes/arch-studio">Em_codes</a></h6>
         </footer>
     );
 }

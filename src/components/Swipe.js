@@ -5,7 +5,6 @@ import SwiperCore, { Navigation, Pagination, A11y, Autoplay  } from 'swiper';
 
 // Import Swiper styles
 import 'swiper/swiper.scss';
-// import 'swiper/components/navigation/navigation.scss';
 import 'swiper/components/pagination/pagination.scss';
 import 'swiper/components/scrollbar/scrollbar.scss';
 import Button from './Button';
